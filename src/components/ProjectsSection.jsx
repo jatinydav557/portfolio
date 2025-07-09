@@ -20,7 +20,7 @@ const categorizedProjects = {
         description: "Developed an HR dashboard to analyze attrition, department-wise headcount, and employee satisfaction metrics.",
         tags: ["Tableau", "HR Analytics", "Attrition", "Data Viz"],
         githubUrl: "https://github.com/jatinydav557/HR-Tableau", // optional
-        image: "/public/projects/hr-dashboard.png",
+        image: "/projects/hr-dashboard.png",
       },
       {
         id: 2,
@@ -28,7 +28,7 @@ const categorizedProjects = {
         description: "Created an interactive Tableau dashboard to track regional sales, revenue breakdown, and customer behavior patterns.",
         tags: ["Tableau", "Sales", "Customer Analytics", "KPIs", "Interactive Dashboard"],
         githubUrl: "https://github.com/jatinydav557/Sales-Customers-Tableau", // optional
-        image: "/public/projects/sales-dashboard.png",
+        image: "/projects/sales-dashboard.png",
       },
        {
         id: 3,
@@ -36,7 +36,7 @@ const categorizedProjects = {
         description: "Analyzed stock trends, moving averages, daily returns, and correlations across Apple, Amazon, Google, and Microsoft.",
         tags: ["EDA", "Stocks", "Pandas", "Seaborn", "Matplotlib", "Financial Data"],
         githubUrl: "https://github.com/jatinydav557/Stock-Price-Analysis/tree/main", // fill in
-        image: "/public/projects/stock-price.png",
+        image: "/projects/stock-price.png",
       },
       {
         id: 4,
@@ -44,7 +44,7 @@ const categorizedProjects = {
         description: "Performed sentiment and emoji analysis on YouTube comments with word clouds and engagement insights.",
         tags: ["NLP", "EDA", "Sentiment Analysis", "Pandas", "Seaborn", "WordCloud"],
         githubUrl: "https://github.com/jatinydav557/Youtube_sentiment_analysis", // fill in
-        image: "/public/projects/yt-analysis.png",
+        image: "/projects/yt-analysis.png",
       },
      
       {
@@ -53,7 +53,7 @@ const categorizedProjects = {
         description: "Built a visual dashboard showing trends in episode ratings, character screen time, and fan sentiment.",
         tags: ["Tableau", "TV Data", "Analytics", "Visualization"],
         githubUrl: "", // optional, for raw data if any
-        image: "/public/projects/bb-dashboard.png",
+        image: "/projects/bb-dashboard.png",
       },
       
       
@@ -65,7 +65,7 @@ const categorizedProjects = {
         title: "Malicious URL Detection - GCP Cloud Run",
         description: "Built a FastAPI-based ML pipeline to detect malicious URLs. CI/CD with Docker + MLflow; deployed on GCP Cloud Run with MongoDB ingestion.",
         tags: ["FastAPI", "Docker", "MLflow", "GCP", "MongoDB"],
-        image: "/public/projects/network-security.png",
+        image: "/projects/network-security.png",
         demoUrl: "https://www.youtube.com/watch?v=_nQ3V6SbxJ0&list=PLe-YIIlt-fbOSpBoaPA6TyB3S25WSf5sL&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/networksecurity",
       },
@@ -73,7 +73,7 @@ const categorizedProjects = {
         id: 2,
         title: "Hotel Booking Cancellation - Jenkins + GCP",
         description: "End-to-end pipeline with Flask API, MLflow tracking, and Jenkins CI/CD. Deployed on Cloud Run using data from GCS buckets.",
-        image: "/public/projects/hotel.png",
+        image: "/projects/hotel.png",
         tags: ["Flask", "MLflow", "Jenkins", "GCP", "Cloud Run"],
         demoUrl: "https://www.youtube.com/watch?v=gwA_81X7AiM&list=PLe-YIIlt-fbOSpBoaPA6TyB3S25WSf5sL&index=4&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/gcp---pipelines--hotel-reservation-prediction",
@@ -82,7 +82,7 @@ const categorizedProjects = {
         id: 3,
         title: "Rain Prediction - GKE with CircleCI",
         description: "XGBoost model deployed to GKE via CircleCI. Includes Dockerized Flask app, Kubernetes manifests, and GCP cloud infra.",
-        image: "/public/projects/rain.png",
+        image: "/projects/rain.png",
         tags: ["XGBoost", "Docker", "GKE", "CircleCI", "Debugging"],
         demoUrl: "https://www.youtube.com/watch?v=hWjNqbbSA5U&list=PLe-YIIlt-fbOSpBoaPA6TyB3S25WSf5sL&index=2&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/australia-weather-rain-prediction",
@@ -91,7 +91,7 @@ const categorizedProjects = {
         id: 4,
         title: "Iris Classifier - CircleCI to GKE",
         description: "CI/CD pipeline using CircleCI and Kubernetes for Iris prediction. Modular Python codebase, Docker, and GCP deployment.",
-        image: "/public/projects/circle-ci.png",
+        image: "/projects/circle-ci.png",
         tags: ["Decision Tree", "CircleCI", "Docker", "Kubernetes", "GCP"],
         demoUrl: "https://www.youtube.com/watch?v=4HJRj0dsnsk&list=PLe-YIIlt-fbOSpBoaPA6TyB3S25WSf5sL&index=3&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/circle-ci-iris-project",
@@ -99,7 +99,7 @@ const categorizedProjects = {
       {
         id: 5,
         title: "Iris Prediction - GitLab CI/CD + GKE",
-        image: "/public/projects/gitlab.png",
+        image: "/projects/gitlab.png",
         description: "GitLab CI/CD pipeline with Docker-in-Docker and Kubernetes deployment for real-time Iris classification.",
         tags: ["GitLab CI/CD", "Docker", "GKE", "GCP", "MLflow", "DVC"],
         demoUrl: "https://www.youtube.com/watch?v=U-ufsR2yDEQ&list=PLe-YIIlt-fbOSpBoaPA6TyB3S25WSf5sL&index=5&ab_channel=Jatin",
@@ -116,7 +116,7 @@ const categorizedProjects = {
         tags: ["Hugging Face", "Transformers", "PyTorch", "ROUGE", "MLOps"],
         demoUrl: "https://www.youtube.com/watch?v=TTt2aFM7G5c&list=PLe-YIIlt-fbPMDsmSXbzQuyBeRKfvs__T&index=2&ab_channel=Jatin", // 🔗 👉 Watch the Demo on YouTube
         githubUrl: "https://github.com/jatinydav557/transformers-huggingface-text-summarization",
-        image: "/public/projects/nlp-text.png",
+        image: "/projects/nlp-text.png",
       },
       {
         id: 2,
@@ -125,7 +125,7 @@ const categorizedProjects = {
         tags: ["Sentence Transformers", "Semantic Search", "Cosine Similarity", "NLP", "Streamlit"],
         demoUrl: "https://www.youtube.com/watch?v=JHRHpaTjnSg&list=PLe-YIIlt-fbPMDsmSXbzQuyBeRKfvs__T&index=1&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/resume-matcher-finetuned-all-MiniLM-L6-v2",
-        image: "/public/projects/resume-matcher.png",
+        image: "/projects/resume-matcher.png",
       },
     ],
 
@@ -138,7 +138,7 @@ const categorizedProjects = {
         tags: ["TensorFlow", "ANN", "Streamlit", "Churn", "Banking"],
         demoUrl: "https://www.youtube.com/watch?v=fkZeUzhmzro&list=PLe-YIIlt-fbMg0B4DsrA8Xa2kgRv_pqA1&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/churn-modelling-ann",
-        image: "/public/projects/churn.png",
+        image: "/projects/churn.png",
       },
       {
         id: 2,
@@ -148,7 +148,7 @@ const categorizedProjects = {
         tags: ["RNN", "TensorFlow", "NLP", "Streamlit", "Sentiment Analysis"],
         demoUrl: "https://www.youtube.com/watch?v=cwitJwbhSgA&list=PLe-YIIlt-fbMg0B4DsrA8Xa2kgRv_pqA1&index=3&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/simple-rnn-imdb",
-        image: "/public/projects/imdb-dl.png",
+        image: "/projects/imdb-dl.png",
       },
       {
         id: 3,
@@ -158,7 +158,7 @@ const categorizedProjects = {
         tags: ["LSTM", "NLP", "Text Generation", "TensorFlow", "Streamlit"],
         demoUrl: "https://www.youtube.com/watch?v=eJ1H5GUIVL4&list=PLe-YIIlt-fbMg0B4DsrA8Xa2kgRv_pqA1&index=2&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/lstm-model-next-word-prediction",
-        image: "/public/projects/lstm-next-word.png",
+        image: "/projects/lstm-next-word.png",
       },
     ],
 
@@ -172,7 +172,7 @@ const categorizedProjects = {
         tags: ["LangChain", "RAG", "Ollama", "Groq", "Streamlit"],
         demoUrl: "https://www.youtube.com/watch?v=e6-uXlkQFQc&list=PLe-YIIlt-fbO3hXVoaPK56ikWRT0A9Gzr&index=5&ab_channel=Jatin", // 🔗 👉 Watch the Demo on YouTube
         githubUrl: "https://github.com/jatinydav557/RAG-QnA-conv-app",
-        image: "/public/projects/QnA.png",
+        image: "/projects/QnA.png",
       },
       {
         id: 2,
@@ -181,7 +181,7 @@ const categorizedProjects = {
         tags: ["Hybrid RAG", "Pinecone", "BM25", "Groq", "LangChain"],
         demoUrl: "https://www.youtube.com/watch?v=eW3zsVGYdKE&list=PLe-YIIlt-fbO3hXVoaPK56ikWRT0A9Gzr&index=7&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/hybrid-search-pineconedb-app",
-        image: "/public/projects/hybrid.png",
+        image: "/projects/hybrid.png",
       },
       {
         id: 3,
@@ -190,7 +190,7 @@ const categorizedProjects = {
         tags: ["LangChain", "Tavily", "Groq", "Agents", "Streamlit"],
         demoUrl: "https://www.youtube.com/watch?v=G18bM5At4F0&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/improved-search-engine-tavily",
-        image: "/public/projects/tavily.png",
+        image: "/projects/tavily.png",
       },
       {
         id: 4,
@@ -199,7 +199,7 @@ const categorizedProjects = {
         tags: ["LangChain", "Summarization", "Groq", "YouTube", "Streamlit"],
         demoUrl: "https://www.youtube.com/watch?v=z5Emuv6UMdc&list=PLe-YIIlt-fbO3hXVoaPK56ikWRT0A9Gzr&index=1&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/website-yt-summarizer-langchain",
-        image: "/public/projects/yt.png",
+        image: "/projects/yt.png",
       },
       {
         id: 5,
@@ -208,16 +208,16 @@ const categorizedProjects = {
         tags: ["LangChain", "MathChain", "Groq", "Wikipedia", "Streamlit"],
         demoUrl: "https://www.youtube.com/watch?v=Xqx2_xOhdn8&list=PLe-YIIlt-fbO3hXVoaPK56ikWRT0A9Gzr&index=8&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/math-problem-genai-app",
-        image: "/public/projects/math.png",
+        image: "/projects/math.png",
       },
       {
         id: 6,
-        title: "Translation API - LangChain + Groq + FastAPI",
-        description: "REST API for language translation using LangChain, Groq’s LLaMA3, and FastAPI with real-time results.",
-        tags: ["LangChain", "Groq", "FastAPI", "Translation", "LLM API"],
+        title: "Website Summarizer - Hugging Face",
+        description: "Summarizes any webpage using LangChain and Mistral-7B via Hugging Face. Fast, clean, and built with Streamlit.",
+        tags: ["LangChain", "Hugging Face", "Summarization", "GenAI"],
         demoUrl: "https://www.youtube.com/watch?v=tcF__KTex-s&list=PLe-YIIlt-fbO3hXVoaPK56ikWRT0A9Gzr&index=2&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/summarizer-hugging-face-langchain",
-        image: "/public/projects/fast.png",
+        image: "/projects/fast.png",
       },
     ],
 
@@ -229,7 +229,7 @@ const categorizedProjects = {
         tags: ["LangGraph", "Together AI", "Llama3"],
         demoUrl: "https://www.youtube.com/watch?v=xJoe-GfQHzA&list=PLe-YIIlt-fbNajMvdZoBUdjZNbmLOMJSU&index=4&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/AI-agent-Story-builder-together-ai",
-        image: "/public/projects/story.png",
+        image: "/projects/story.png",
       },
       {
         id: 2,
@@ -238,7 +238,7 @@ const categorizedProjects = {
         tags: ["LangGraph", "Groq", "LangChain", "Streamlit"],
         demoUrl: "https://www.youtube.com/watch?v=B3IQRdgbdDM&list=PLe-YIIlt-fbNajMvdZoBUdjZNbmLOMJSU&index=2&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/Report-generator-agent",
-        image: "/public/projects/report.png",
+        image: "/projects/report.png",
       },
       {
         id: 3,
@@ -247,7 +247,7 @@ const categorizedProjects = {
         tags: ["LangGraph", "Groq", "FastAPI", "Translation"],
         demoUrl: "https://www.youtube.com/watch?v=YsCMANRUcGI&list=PLe-YIIlt-fbNajMvdZoBUdjZNbmLOMJSU&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/blog-generator-agent",
-        image: "/public/projects/blog.png",
+        image: "/projects/blog.png",
       },
       {
         id: 4,
@@ -256,7 +256,7 @@ const categorizedProjects = {
         tags: ["LangGraph", "Groq", "Tavily", "Streamlit"],
         demoUrl: "https://www.youtube.com/watch?v=YsCMANRUcGI&list=PLe-YIIlt-fbNajMvdZoBUdjZNbmLOMJSU&index=1&ab_channel=Jatin",
         githubUrl: "https://github.com/jatinydav557/agentic-chatbot",
-        image: "/public/projects/agent.png",
+        image: "/projects/agent.png",
       },
     ],
 
