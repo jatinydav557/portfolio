@@ -1,0 +1,389 @@
+import { useState } from "react";
+import {
+  ArrowRight,
+  Youtube,
+  Github,
+  BarChart3,
+  Database,
+  MessageSquareText,
+  Brain,
+  Bot,
+  Workflow,
+} from "lucide-react";
+import { motion } from "framer-motion";
+
+const categorizedProjects = {
+  DataAnalysis: [
+      {
+        id: 1,
+        title: "YouTube Comments Analysis",
+        description: "Performed sentiment and emoji analysis on YouTube comments with word clouds and engagement insights.",
+        tags: ["NLP", "EDA", "Sentiment Analysis", "Pandas", "Seaborn", "WordCloud"],
+        githubUrl: "", // fill in
+        image: "youtube_comments_analysis.png",
+      },
+      {
+        id: 2,
+        title: "Stock Price Analysis of Tech Companies",
+        description: "Analyzed stock trends, moving averages, daily returns, and correlations across Apple, Amazon, Google, and Microsoft.",
+        tags: ["EDA", "Stocks", "Pandas", "Seaborn", "Matplotlib", "Financial Data"],
+        githubUrl: "", // fill in
+        image: "stock_analysis.png",
+      },
+      {
+        id: 3,
+        title: "Breaking Bad Viewership Dashboard",
+        description: "Built a visual dashboard showing trends in episode ratings, character screen time, and fan sentiment.",
+        tags: ["Tableau", "TV Data", "Analytics", "Visualization"],
+        githubUrl: "", // optional, for raw data if any
+        image: "breaking_bad_dashboard.png",
+      },
+      {
+        id: 4,
+        title: "Sales & Customers Dashboard",
+        description: "Created an interactive Tableau dashboard to track regional sales, revenue breakdown, and customer behavior patterns.",
+        tags: ["Tableau", "Sales", "Customer Analytics", "KPIs", "Interactive Dashboard"],
+        githubUrl: "", // optional
+        image: "sales_customers_dashboard.png",
+      },
+      {
+        id: 5,
+        title: "HR Analytics Dashboard",
+        description: "Developed an HR dashboard to analyze attrition, department-wise headcount, and employee satisfaction metrics.",
+        tags: ["Tableau", "HR Analytics", "Attrition", "Data Viz"],
+        githubUrl: "", // optional
+        image: "hr_dashboard.png",
+      },
+    ],
+
+  MLOps: [
+      {
+        id: 1,
+        title: "Malicious URL Detection - GCP Cloud Run",
+        description: "Built a FastAPI-based ML pipeline to detect malicious URLs. CI/CD with Docker + MLflow; deployed on GCP Cloud Run with MongoDB ingestion.",
+        tags: ["FastAPI", "Docker", "MLflow", "GCP", "MongoDB"],
+        image: "https://placehold.co/600x400?text=NLP+Resume+Matcher",
+        demoUrl: "#",
+        githubUrl: "#",
+      },
+      {
+        id: 2,
+        title: "Hotel Booking Cancellation - Jenkins + GCP",
+        description: "End-to-end pipeline with Flask API, MLflow tracking, and Jenkins CI/CD. Deployed on Cloud Run using data from GCS buckets.",
+        image: "https://placehold.co/600x400?text=NLP+Resume+Matcher",
+        tags: ["Flask", "MLflow", "Jenkins", "GCP", "Cloud Run"],
+        demoUrl: "#",
+        githubUrl: "#",
+      },
+      {
+        id: 3,
+        title: "Rain Prediction - GKE with CircleCI",
+        description: "XGBoost model deployed to GKE via CircleCI. Includes Dockerized Flask app, Kubernetes manifests, and GCP cloud infra.",
+        image: "https://placehold.co/600x400?text=NLP+Resume+Matcher",
+        tags: ["XGBoost", "Docker", "GKE", "CircleCI", "Debugging"],
+        demoUrl: "#",
+        githubUrl: "#",
+      },
+      {
+        id: 4,
+        title: "Iris Classifier - CircleCI to GKE",
+        description: "CI/CD pipeline using CircleCI and Kubernetes for Iris prediction. Modular Python codebase, Docker, and GCP deployment.",
+        image: "https://placehold.co/600x400?text=NLP+Resume+Matcher",
+        tags: ["Decision Tree", "CircleCI", "Docker", "Kubernetes", "GCP"],
+        demoUrl: "#",
+        githubUrl: "#",
+      },
+      {
+        id: 5,
+        title: "Iris Prediction - GitLab CI/CD + GKE",
+        image: "https://placehold.co/600x400?text=NLP+Resume+Matcher",
+        description: "GitLab CI/CD pipeline with Docker-in-Docker and Kubernetes deployment for real-time Iris classification.",
+        tags: ["GitLab CI/CD", "Docker", "GKE", "GCP", "MLflow", "DVC"],
+        demoUrl: "#",
+        githubUrl: "#",
+      },
+    ],
+
+
+  NLP: [
+      {
+        id: 1,
+        title: "Abstractive Summarizer - Hugging Face + MLOps",
+        description: "Fine-tuned Pegasus on dialogue data for abstractive summarization with a modular pipeline for training, evaluation (ROUGE), and inference using Hugging Face.",
+        tags: ["Hugging Face", "Transformers", "PyTorch", "ROUGE", "MLOps"],
+        demoUrl: "#", // 🔗 👉 Watch the Demo on YouTube
+        githubUrl: "#",
+        image: "summarizer.png",
+      },
+      {
+        id: 2,
+        title: "Resume Matcher - Semantic AI with Sentence Transformers",
+        description: "Built a semantic resume matcher using fine-tuned Sentence Transformers and cosine similarity, deployed via Streamlit with PDF parsing.",
+        tags: ["Sentence Transformers", "Semantic Search", "Cosine Similarity", "NLP", "Streamlit"],
+        demoUrl: "#",
+        githubUrl: "#",
+        image: "resume_matcher.png",
+      },
+    ],
+
+   DeepLearning: [
+      {
+        id: 1,
+        title: "Customer Churn Prediction with ANN + Streamlit",
+        description:
+          "ANN-based churn prediction model with a Streamlit app for real-time business decision support.",
+        tags: ["TensorFlow", "ANN", "Streamlit", "Churn", "Banking"],
+        demoUrl: "#",
+        githubUrl: "#",
+        image: "customer-churn-prediction.png",
+      },
+      {
+        id: 2,
+        title: "IMDB Sentiment Analysis with Simple RNN",
+        description:
+          "Deployed RNN for real-time movie review sentiment classification with interactive UI and word cloud.",
+        tags: ["RNN", "TensorFlow", "NLP", "Streamlit", "Sentiment Analysis"],
+        demoUrl: "#",
+        githubUrl: "#",
+        image: "imdb-sentiment-analysis.png",
+      },
+      {
+        id: 3,
+        title: "Next Word Prediction using LSTM (Shakespeare)",
+        description:
+          "LSTM trained on Hamlet for next-word prediction with multi-word generation via Streamlit app.",
+        tags: ["LSTM", "NLP", "Text Generation", "TensorFlow", "Streamlit"],
+        demoUrl: "#",
+        githubUrl: "#",
+        image: "next-word-prediction.png",
+      },
+    ],
+
+
+
+  GenAI: [
+      {
+        id: 1,
+        title: "RAG PDF Q&A with Ollama ",
+        description: "Query research papers with an end-to-end RAG pipeline using LangChain, Groq’s LLaMA3, and Ollama embeddings via Streamlit.",
+        tags: ["LangChain", "RAG", "Ollama", "Groq", "Streamlit"],
+        demoUrl: "#", // 🔗 👉 Watch the Demo on YouTube
+        githubUrl: "#",
+        image: "https://placehold.co/600x400?text=RAG+PDF+QA",
+      },
+      {
+        id: 2,
+        title: "Hybrid RAG Chatbot - Pinecone + BM25",
+        description: "Built a hybrid retrieval chatbot combining dense and sparse search with Groq LLaMA3 and LangChain for smart Q&A.",
+        tags: ["Hybrid RAG", "Pinecone", "BM25", "Groq", "LangChain"],
+        demoUrl: "#",
+        githubUrl: "#",
+        image: "https://placehold.co/600x400?text=Hybrid+Search+Chatbot",
+      },
+      {
+        id: 3,
+        title: "Real-Time Web Chatbot - Tavily ",
+        description: "Real-time search assistant using LangChain Agents, Tavily, and Groq for smart, tool-based answers via Streamlit UI.",
+        tags: ["LangChain", "Tavily", "Groq", "Agents", "Streamlit"],
+        demoUrl: "#",
+        githubUrl: "#",
+        image: "https://placehold.co/600x400?text=Tavily+Search+Bot",
+      },
+      {
+        id: 4,
+        title: "YouTube & Website Summarizer - LangChain ",
+        description: "Summarizes YouTube videos and web articles using LangChain summarize chains and Groq’s ultra-fast LLaMA3.",
+        tags: ["LangChain", "Summarization", "Groq", "YouTube", "Streamlit"],
+        demoUrl: "#",
+        githubUrl: "#",
+        image: "https://placehold.co/600x400?text=YT+%2B+Web+Summarizer",
+      },
+      {
+        id: 5,
+        title: "Math Solver + Wiki Assistant ",
+        description: "Interactive app to solve math problems and search Wikipedia using LLMMathChain and Groq’s Gemma model.",
+        tags: ["LangChain", "MathChain", "Groq", "Wikipedia", "Streamlit"],
+        demoUrl: "#",
+        githubUrl: "#",
+        image: "https://placehold.co/600x400?text=Math+%2B+Wiki+Bot",
+      },
+      {
+        id: 6,
+        title: "Translation API - Groq + FastAPI",
+        description: "Language translation API using LangChain, Groq’s LLaMA models, and FastAPI with clean REST endpoint.",
+        tags: ["FastAPI", "LangChain", "Groq", "Translation", "API"],
+        demoUrl: "#",
+        githubUrl: "#",
+        image: "https://placehold.co/600x400?text=Translation+API",
+      },
+    ],
+
+  AgenticAI: [
+      {
+        id: 1,
+        title: "AI Story Builder – Agentic Creativity with LangGraph & Together AI",
+        description: "Agentic storytelling app that generates, enhances, and twists narratives using LangGraph and Llama3.",
+        tags: ["LangGraph", "Together AI", "Llama3", "Streamlit"],
+        demoUrl: "#",
+        githubUrl: "#",
+        image: "https://placehold.co/600x400?text=AI+Story",
+      },
+      {
+        id: 2,
+        title: "AI Report Generator using LangGraph + Llama3",
+        description: "Generates structured reports using agentic workflows and parallel AI writing agents.",
+        tags: ["LangGraph", "Groq", "LangChain", "Streamlit"],
+        demoUrl: "#",
+        githubUrl: "#",
+        image: "https://placehold.co/600x400?text=AI_Report",
+      },
+      {
+        id: 3,
+        title: "LangGraph Blog Generator API with Translation",
+        description: "Blog generator API with SEO, markdown, and multi-language support using LangGraph.",
+        tags: ["LangGraph", "Groq", "FastAPI", "Translation"],
+        demoUrl: "#",
+        githubUrl: "#",
+        image: "https://placehold.co/600x400?text=Blog",
+      },
+      {
+        id: 4,
+        title: "LangGraph Agentic Chatbot – Multi-Mode Conversational Agent",
+        description: "Versatile chatbot with basic, web search, and AI news modes via agentic flow.",
+        tags: ["LangGraph", "Groq", "Tavily", "Streamlit"],
+        demoUrl: "#",
+        githubUrl: "#",
+        image: "https://placehold.co/600x400?text=Chatbot",
+      },
+    ],
+
+
+};
+
+const tabInfo = [
+  { key: "DataAnalysis", label: "Data Analysis", icon: <BarChart3 size={16} /> },
+  { key: "MLOps", label: "MLOps", icon: <Database size={16} /> },
+  { key: "NLP", label: "NLP", icon: <MessageSquareText size={16} /> },
+  { key: "DeepLearning", label: "Deep Learning", icon: <Brain size={16} /> },
+  { key: "GenAI", label: "Gen AI", icon: <Bot size={16} /> },
+  { key: "AgenticAI", label: "Agentic AI", icon: <Workflow size={16} /> },
+];
+
+export const ProjectsSection = () => {
+  const [activeTab, setActiveTab] = useState("DataAnalysis");
+
+  return (
+    <section id="projects" className="py-24 px-4 relative">
+      <div className="container mx-auto max-w-6xl">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="text-3xl md:text-4xl font-bold mb-6 text-center"
+        >
+          Project <span className="text-primary">Showcase</span>
+        </motion.h2>
+
+        {/* Tab Buttons with Icons */}
+        <div className="flex justify-center gap-4 flex-wrap mb-12">
+          {tabInfo.map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setActiveTab(tab.key)}
+              className={`px-4 py-2 rounded-full border flex items-center gap-2 ${
+                activeTab === tab.key
+                  ? "bg-primary text-white"
+                  : "bg-muted text-foreground hover:bg-accent"
+              } transition`}
+            >
+              {tab.icon}
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Projects Grid */}
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          viewport={{ once: false }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {categorizedProjects[activeTab].map((project, idx) => (
+            <motion.div
+              key={idx}
+              whileHover={{ scale: 1.02 }}
+              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+            >
+              <div className="h-48 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  {project.description}
+                </p>
+                <div className="flex space-x-3">
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    className="text-foreground/80 hover:text-primary transition-colors"
+                  >
+                    <Youtube size={22} />
+                  </a>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    className="text-foreground/80 hover:text-primary transition-colors"
+                  >
+                    <Github size={22} />
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* GitHub & YouTube Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="text-center mt-16 space-y-4"
+        >
+          <a
+            className="cosmic-button w-fit flex items-center mx-auto gap-2"
+            target="_blank"
+            href="https://github.com/jatinydav557"
+          >
+            <Github size={16} /> Explore My GitHub <ArrowRight size={16} />
+          </a>
+
+          <a
+            className="cosmic-button w-fit flex items-center mx-auto gap-2"
+            target="_blank"
+            href="https://www.youtube.com/@jatinML/playlists"
+          >
+            <Youtube size={16} /> Explore My YouTube <ArrowRight size={16} />
+          </a>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
