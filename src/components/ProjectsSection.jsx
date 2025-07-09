@@ -14,46 +14,49 @@ import { motion } from "framer-motion";
 
 const categorizedProjects = {
   DataAnalysis: [
-      {
+     {
         id: 1,
-        title: "YouTube Comments Analysis",
-        description: "Performed sentiment and emoji analysis on YouTube comments with word clouds and engagement insights.",
-        tags: ["NLP", "EDA", "Sentiment Analysis", "Pandas", "Seaborn", "WordCloud"],
-        githubUrl: "", // fill in
-        image: "youtube_comments_analysis.png",
+        title: "HR Analytics Dashboard",
+        description: "Developed an HR dashboard to analyze attrition, department-wise headcount, and employee satisfaction metrics.",
+        tags: ["Tableau", "HR Analytics", "Attrition", "Data Viz"],
+        githubUrl: "https://github.com/jatinydav557/HR-Tableau", // optional
+        image: "/public/projects/hr-dashboard.png",
       },
       {
         id: 2,
+        title: "Sales & Customers Dashboard",
+        description: "Created an interactive Tableau dashboard to track regional sales, revenue breakdown, and customer behavior patterns.",
+        tags: ["Tableau", "Sales", "Customer Analytics", "KPIs", "Interactive Dashboard"],
+        githubUrl: "https://github.com/jatinydav557/Sales-Customers-Tableau", // optional
+        image: "/public/projects/sales-dashboard.png",
+      },
+       {
+        id: 3,
         title: "Stock Price Analysis of Tech Companies",
         description: "Analyzed stock trends, moving averages, daily returns, and correlations across Apple, Amazon, Google, and Microsoft.",
         tags: ["EDA", "Stocks", "Pandas", "Seaborn", "Matplotlib", "Financial Data"],
-        githubUrl: "", // fill in
-        image: "stock_analysis.png",
+        githubUrl: "https://github.com/jatinydav557/Stock-Price-Analysis/tree/main", // fill in
+        image: "/public/projects/stock-price.png",
       },
       {
-        id: 3,
+        id: 4,
+        title: "YouTube Comments Analysis",
+        description: "Performed sentiment and emoji analysis on YouTube comments with word clouds and engagement insights.",
+        tags: ["NLP", "EDA", "Sentiment Analysis", "Pandas", "Seaborn", "WordCloud"],
+        githubUrl: "https://github.com/jatinydav557/Youtube_sentiment_analysis", // fill in
+        image: "/public/projects/yt-analysis.png",
+      },
+     
+      {
+        id: 5,
         title: "Breaking Bad Viewership Dashboard",
         description: "Built a visual dashboard showing trends in episode ratings, character screen time, and fan sentiment.",
         tags: ["Tableau", "TV Data", "Analytics", "Visualization"],
         githubUrl: "", // optional, for raw data if any
-        image: "breaking_bad_dashboard.png",
+        image: "/public/projects/bb-dashboard.png",
       },
-      {
-        id: 4,
-        title: "Sales & Customers Dashboard",
-        description: "Created an interactive Tableau dashboard to track regional sales, revenue breakdown, and customer behavior patterns.",
-        tags: ["Tableau", "Sales", "Customer Analytics", "KPIs", "Interactive Dashboard"],
-        githubUrl: "", // optional
-        image: "sales_customers_dashboard.png",
-      },
-      {
-        id: 5,
-        title: "HR Analytics Dashboard",
-        description: "Developed an HR dashboard to analyze attrition, department-wise headcount, and employee satisfaction metrics.",
-        tags: ["Tableau", "HR Analytics", "Attrition", "Data Viz"],
-        githubUrl: "", // optional
-        image: "hr_dashboard.png",
-      },
+      
+      
     ],
 
   MLOps: [
@@ -62,45 +65,45 @@ const categorizedProjects = {
         title: "Malicious URL Detection - GCP Cloud Run",
         description: "Built a FastAPI-based ML pipeline to detect malicious URLs. CI/CD with Docker + MLflow; deployed on GCP Cloud Run with MongoDB ingestion.",
         tags: ["FastAPI", "Docker", "MLflow", "GCP", "MongoDB"],
-        image: "https://placehold.co/600x400?text=NLP+Resume+Matcher",
-        demoUrl: "#",
-        githubUrl: "#",
+        image: "/public/projects/network-security.png",
+        demoUrl: "https://www.youtube.com/watch?v=_nQ3V6SbxJ0&list=PLe-YIIlt-fbOSpBoaPA6TyB3S25WSf5sL&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/networksecurity",
       },
       {
         id: 2,
         title: "Hotel Booking Cancellation - Jenkins + GCP",
         description: "End-to-end pipeline with Flask API, MLflow tracking, and Jenkins CI/CD. Deployed on Cloud Run using data from GCS buckets.",
-        image: "https://placehold.co/600x400?text=NLP+Resume+Matcher",
+        image: "/public/projects/hotel.png",
         tags: ["Flask", "MLflow", "Jenkins", "GCP", "Cloud Run"],
-        demoUrl: "#",
-        githubUrl: "#",
+        demoUrl: "https://www.youtube.com/watch?v=gwA_81X7AiM&list=PLe-YIIlt-fbOSpBoaPA6TyB3S25WSf5sL&index=4&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/gcp---pipelines--hotel-reservation-prediction",
       },
       {
         id: 3,
         title: "Rain Prediction - GKE with CircleCI",
         description: "XGBoost model deployed to GKE via CircleCI. Includes Dockerized Flask app, Kubernetes manifests, and GCP cloud infra.",
-        image: "https://placehold.co/600x400?text=NLP+Resume+Matcher",
+        image: "/public/projects/rain.png",
         tags: ["XGBoost", "Docker", "GKE", "CircleCI", "Debugging"],
-        demoUrl: "#",
-        githubUrl: "#",
+        demoUrl: "https://www.youtube.com/watch?v=hWjNqbbSA5U&list=PLe-YIIlt-fbOSpBoaPA6TyB3S25WSf5sL&index=2&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/australia-weather-rain-prediction",
       },
       {
         id: 4,
         title: "Iris Classifier - CircleCI to GKE",
         description: "CI/CD pipeline using CircleCI and Kubernetes for Iris prediction. Modular Python codebase, Docker, and GCP deployment.",
-        image: "https://placehold.co/600x400?text=NLP+Resume+Matcher",
+        image: "/public/projects/circle-ci.png",
         tags: ["Decision Tree", "CircleCI", "Docker", "Kubernetes", "GCP"],
-        demoUrl: "#",
-        githubUrl: "#",
+        demoUrl: "https://www.youtube.com/watch?v=4HJRj0dsnsk&list=PLe-YIIlt-fbOSpBoaPA6TyB3S25WSf5sL&index=3&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/circle-ci-iris-project",
       },
       {
         id: 5,
         title: "Iris Prediction - GitLab CI/CD + GKE",
-        image: "https://placehold.co/600x400?text=NLP+Resume+Matcher",
+        image: "/public/projects/gitlab.png",
         description: "GitLab CI/CD pipeline with Docker-in-Docker and Kubernetes deployment for real-time Iris classification.",
         tags: ["GitLab CI/CD", "Docker", "GKE", "GCP", "MLflow", "DVC"],
-        demoUrl: "#",
-        githubUrl: "#",
+        demoUrl: "https://www.youtube.com/watch?v=U-ufsR2yDEQ&list=PLe-YIIlt-fbOSpBoaPA6TyB3S25WSf5sL&index=5&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/gitlab-gke-project",
       },
     ],
 
@@ -111,18 +114,18 @@ const categorizedProjects = {
         title: "Abstractive Summarizer - Hugging Face + MLOps",
         description: "Fine-tuned Pegasus on dialogue data for abstractive summarization with a modular pipeline for training, evaluation (ROUGE), and inference using Hugging Face.",
         tags: ["Hugging Face", "Transformers", "PyTorch", "ROUGE", "MLOps"],
-        demoUrl: "#", // 🔗 👉 Watch the Demo on YouTube
-        githubUrl: "#",
-        image: "summarizer.png",
+        demoUrl: "https://www.youtube.com/watch?v=TTt2aFM7G5c&list=PLe-YIIlt-fbPMDsmSXbzQuyBeRKfvs__T&index=2&ab_channel=Jatin", // 🔗 👉 Watch the Demo on YouTube
+        githubUrl: "https://github.com/jatinydav557/transformers-huggingface-text-summarization",
+        image: "/public/projects/nlp-text.png",
       },
       {
         id: 2,
         title: "Resume Matcher - Semantic AI with Sentence Transformers",
         description: "Built a semantic resume matcher using fine-tuned Sentence Transformers and cosine similarity, deployed via Streamlit with PDF parsing.",
         tags: ["Sentence Transformers", "Semantic Search", "Cosine Similarity", "NLP", "Streamlit"],
-        demoUrl: "#",
-        githubUrl: "#",
-        image: "resume_matcher.png",
+        demoUrl: "https://www.youtube.com/watch?v=JHRHpaTjnSg&list=PLe-YIIlt-fbPMDsmSXbzQuyBeRKfvs__T&index=1&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/resume-matcher-finetuned-all-MiniLM-L6-v2",
+        image: "/public/projects/resume-matcher.png",
       },
     ],
 
@@ -133,9 +136,9 @@ const categorizedProjects = {
         description:
           "ANN-based churn prediction model with a Streamlit app for real-time business decision support.",
         tags: ["TensorFlow", "ANN", "Streamlit", "Churn", "Banking"],
-        demoUrl: "#",
-        githubUrl: "#",
-        image: "customer-churn-prediction.png",
+        demoUrl: "https://www.youtube.com/watch?v=fkZeUzhmzro&list=PLe-YIIlt-fbMg0B4DsrA8Xa2kgRv_pqA1&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/churn-modelling-ann",
+        image: "/public/projects/churn.png",
       },
       {
         id: 2,
@@ -143,9 +146,9 @@ const categorizedProjects = {
         description:
           "Deployed RNN for real-time movie review sentiment classification with interactive UI and word cloud.",
         tags: ["RNN", "TensorFlow", "NLP", "Streamlit", "Sentiment Analysis"],
-        demoUrl: "#",
-        githubUrl: "#",
-        image: "imdb-sentiment-analysis.png",
+        demoUrl: "https://www.youtube.com/watch?v=cwitJwbhSgA&list=PLe-YIIlt-fbMg0B4DsrA8Xa2kgRv_pqA1&index=3&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/simple-rnn-imdb",
+        image: "/public/projects/imdb-dl.png",
       },
       {
         id: 3,
@@ -153,9 +156,9 @@ const categorizedProjects = {
         description:
           "LSTM trained on Hamlet for next-word prediction with multi-word generation via Streamlit app.",
         tags: ["LSTM", "NLP", "Text Generation", "TensorFlow", "Streamlit"],
-        demoUrl: "#",
-        githubUrl: "#",
-        image: "next-word-prediction.png",
+        demoUrl: "https://www.youtube.com/watch?v=eJ1H5GUIVL4&list=PLe-YIIlt-fbMg0B4DsrA8Xa2kgRv_pqA1&index=2&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/lstm-model-next-word-prediction",
+        image: "/public/projects/lstm-next-word.png",
       },
     ],
 
@@ -167,54 +170,54 @@ const categorizedProjects = {
         title: "RAG PDF Q&A with Ollama ",
         description: "Query research papers with an end-to-end RAG pipeline using LangChain, Groq’s LLaMA3, and Ollama embeddings via Streamlit.",
         tags: ["LangChain", "RAG", "Ollama", "Groq", "Streamlit"],
-        demoUrl: "#", // 🔗 👉 Watch the Demo on YouTube
-        githubUrl: "#",
-        image: "https://placehold.co/600x400?text=RAG+PDF+QA",
+        demoUrl: "https://www.youtube.com/watch?v=e6-uXlkQFQc&list=PLe-YIIlt-fbO3hXVoaPK56ikWRT0A9Gzr&index=5&ab_channel=Jatin", // 🔗 👉 Watch the Demo on YouTube
+        githubUrl: "https://github.com/jatinydav557/RAG-QnA-conv-app",
+        image: "/public/projects/QnA.png",
       },
       {
         id: 2,
         title: "Hybrid RAG Chatbot - Pinecone + BM25",
         description: "Built a hybrid retrieval chatbot combining dense and sparse search with Groq LLaMA3 and LangChain for smart Q&A.",
         tags: ["Hybrid RAG", "Pinecone", "BM25", "Groq", "LangChain"],
-        demoUrl: "#",
-        githubUrl: "#",
-        image: "https://placehold.co/600x400?text=Hybrid+Search+Chatbot",
+        demoUrl: "https://www.youtube.com/watch?v=eW3zsVGYdKE&list=PLe-YIIlt-fbO3hXVoaPK56ikWRT0A9Gzr&index=7&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/hybrid-search-pineconedb-app",
+        image: "/public/projects/hybrid.png",
       },
       {
         id: 3,
         title: "Real-Time Web Chatbot - Tavily ",
         description: "Real-time search assistant using LangChain Agents, Tavily, and Groq for smart, tool-based answers via Streamlit UI.",
         tags: ["LangChain", "Tavily", "Groq", "Agents", "Streamlit"],
-        demoUrl: "#",
-        githubUrl: "#",
-        image: "https://placehold.co/600x400?text=Tavily+Search+Bot",
+        demoUrl: "https://www.youtube.com/watch?v=G18bM5At4F0&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/improved-search-engine-tavily",
+        image: "/public/projects/tavily.png",
       },
       {
         id: 4,
         title: "YouTube & Website Summarizer - LangChain ",
         description: "Summarizes YouTube videos and web articles using LangChain summarize chains and Groq’s ultra-fast LLaMA3.",
         tags: ["LangChain", "Summarization", "Groq", "YouTube", "Streamlit"],
-        demoUrl: "#",
-        githubUrl: "#",
-        image: "https://placehold.co/600x400?text=YT+%2B+Web+Summarizer",
+        demoUrl: "https://www.youtube.com/watch?v=z5Emuv6UMdc&list=PLe-YIIlt-fbO3hXVoaPK56ikWRT0A9Gzr&index=1&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/website-yt-summarizer-langchain",
+        image: "/public/projects/yt.png",
       },
       {
         id: 5,
         title: "Math Solver + Wiki Assistant ",
         description: "Interactive app to solve math problems and search Wikipedia using LLMMathChain and Groq’s Gemma model.",
         tags: ["LangChain", "MathChain", "Groq", "Wikipedia", "Streamlit"],
-        demoUrl: "#",
-        githubUrl: "#",
-        image: "https://placehold.co/600x400?text=Math+%2B+Wiki+Bot",
+        demoUrl: "https://www.youtube.com/watch?v=Xqx2_xOhdn8&list=PLe-YIIlt-fbO3hXVoaPK56ikWRT0A9Gzr&index=8&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/math-problem-genai-app",
+        image: "/public/projects/math.png",
       },
       {
         id: 6,
-        title: "Translation API - Groq + FastAPI",
-        description: "Language translation API using LangChain, Groq’s LLaMA models, and FastAPI with clean REST endpoint.",
-        tags: ["FastAPI", "LangChain", "Groq", "Translation", "API"],
-        demoUrl: "#",
-        githubUrl: "#",
-        image: "https://placehold.co/600x400?text=Translation+API",
+        title: "Translation API - LangChain + Groq + FastAPI",
+        description: "REST API for language translation using LangChain, Groq’s LLaMA3, and FastAPI with real-time results.",
+        tags: ["LangChain", "Groq", "FastAPI", "Translation", "LLM API"],
+        demoUrl: "https://www.youtube.com/watch?v=tcF__KTex-s&list=PLe-YIIlt-fbO3hXVoaPK56ikWRT0A9Gzr&index=2&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/summarizer-hugging-face-langchain",
+        image: "/public/projects/fast.png",
       },
     ],
 
@@ -223,37 +226,37 @@ const categorizedProjects = {
         id: 1,
         title: "AI Story Builder – Agentic Creativity with LangGraph & Together AI",
         description: "Agentic storytelling app that generates, enhances, and twists narratives using LangGraph and Llama3.",
-        tags: ["LangGraph", "Together AI", "Llama3", "Streamlit"],
-        demoUrl: "#",
-        githubUrl: "#",
-        image: "https://placehold.co/600x400?text=AI+Story",
+        tags: ["LangGraph", "Together AI", "Llama3"],
+        demoUrl: "https://www.youtube.com/watch?v=xJoe-GfQHzA&list=PLe-YIIlt-fbNajMvdZoBUdjZNbmLOMJSU&index=4&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/AI-agent-Story-builder-together-ai",
+        image: "/public/projects/story.png",
       },
       {
         id: 2,
         title: "AI Report Generator using LangGraph + Llama3",
         description: "Generates structured reports using agentic workflows and parallel AI writing agents.",
         tags: ["LangGraph", "Groq", "LangChain", "Streamlit"],
-        demoUrl: "#",
-        githubUrl: "#",
-        image: "https://placehold.co/600x400?text=AI_Report",
+        demoUrl: "https://www.youtube.com/watch?v=B3IQRdgbdDM&list=PLe-YIIlt-fbNajMvdZoBUdjZNbmLOMJSU&index=2&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/Report-generator-agent",
+        image: "/public/projects/report.png",
       },
       {
         id: 3,
         title: "LangGraph Blog Generator API with Translation",
         description: "Blog generator API with SEO, markdown, and multi-language support using LangGraph.",
         tags: ["LangGraph", "Groq", "FastAPI", "Translation"],
-        demoUrl: "#",
-        githubUrl: "#",
-        image: "https://placehold.co/600x400?text=Blog",
+        demoUrl: "https://www.youtube.com/watch?v=YsCMANRUcGI&list=PLe-YIIlt-fbNajMvdZoBUdjZNbmLOMJSU&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/blog-generator-agent",
+        image: "/public/projects/blog.png",
       },
       {
         id: 4,
         title: "LangGraph Agentic Chatbot – Multi-Mode Conversational Agent",
         description: "Versatile chatbot with basic, web search, and AI news modes via agentic flow.",
         tags: ["LangGraph", "Groq", "Tavily", "Streamlit"],
-        demoUrl: "#",
-        githubUrl: "#",
-        image: "https://placehold.co/600x400?text=Chatbot",
+        demoUrl: "https://www.youtube.com/watch?v=YsCMANRUcGI&list=PLe-YIIlt-fbNajMvdZoBUdjZNbmLOMJSU&index=1&ab_channel=Jatin",
+        githubUrl: "https://github.com/jatinydav557/agentic-chatbot",
+        image: "/public/projects/agent.png",
       },
     ],
 
@@ -281,7 +284,7 @@ export const ProjectsSection = () => {
           transition={{ duration: 0.4 }}
           className="text-3xl md:text-4xl font-bold mb-6 text-center"
         >
-          Project <span className="text-primary">Showcase</span>
+          Work <span className="text-primary">Showcase</span>
         </motion.h2>
 
         {/* Tab Buttons with Icons */}
@@ -340,6 +343,7 @@ export const ProjectsSection = () => {
                   {project.description}
                 </p>
                 <div className="flex space-x-3">
+                {project.demoUrl && (
                   <a
                     href={project.demoUrl}
                     target="_blank"
@@ -347,6 +351,8 @@ export const ProjectsSection = () => {
                   >
                     <Youtube size={22} />
                   </a>
+                )}
+                {project.githubUrl && (
                   <a
                     href={project.githubUrl}
                     target="_blank"
@@ -354,7 +360,9 @@ export const ProjectsSection = () => {
                   >
                     <Github size={22} />
                   </a>
-                </div>
+                )}
+              </div>
+
               </div>
             </motion.div>
           ))}
