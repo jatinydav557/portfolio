@@ -273,7 +273,7 @@ const tabInfo = [
 ];
 
 export const ProjectsSection = () => {
-  const [activeTab, setActiveTab] = useState("DataAnalysis");
+  const [activeTab, setActiveTab] = useState("MLOps");
 
   return (
     <section id="projects" className="py-24 px-4 relative">
