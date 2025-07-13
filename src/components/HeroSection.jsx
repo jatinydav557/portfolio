@@ -47,15 +47,6 @@ export const HeroSection = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="text-center md:text-left space-y-6 md:max-w-xl md:ml-10"
           >
-            {/* Profile Image with Matching Neon Glow */}
-            <div className="relative flex justify-center mt-12 mb-12">
-              <div className="absolute inset-0 blur-2xl rounded-xl z-0 bg-gradient-to-br from-pink-500 via-purple-500 to-purple-700 opacity-40"></div>
-              <img
-                src="/projects/jatin.jpg"
-                alt="Jatin Yadav"
-                className="relative z-10 rounded-xl shadow-lg w-full max-w-[300px] object-cover"
-              />
-            </div>
 
 
 
