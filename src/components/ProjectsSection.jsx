@@ -368,6 +368,16 @@ export const ProjectsSection = () => {
           ))}
         </motion.div>
 
+        {/* Aesthetic Laptop Image (Updated) */}
+        <div className="relative flex justify-center mt-18 mb-16">
+          <div className="absolute inset-0 blur-2xl rounded-lg z-0 bg-gradient-to-br from-pink-500 via-purple-500 to-purple-700 opacity-30"></div>
+          <img
+            src="/projects/laptop.jpg"
+            alt="Aesthetic Laptop"
+            className="relative z-10 rounded-lg shadow-lg w-full max-w-lg"
+          />
+        </div>
+
         {/* GitHub & YouTube Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
