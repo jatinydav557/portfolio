@@ -69,9 +69,7 @@ export const HeroSection = () => {
                   "LLM Developer (RAG/Agents) 🤖🧠",
                   2000,
                   "NLP & Transformers 🗣️📚",
-                  2000,
-                  "Data Analysis 📊📈📉",
-                  2000,
+                  2000
                 ]}
 
                 speed={60}
