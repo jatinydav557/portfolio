@@ -130,24 +130,27 @@ const categorizedProjects = {
     ],
 
       VijayiWFH: [
+
+
     {
       id: 1,
-      title: "Ticket Classifier & Entity Extractor - Classical NLP",
-      description: "Classifies support tickets by issue type and urgency using Logistic Regression, with entity extraction via TF-IDF, regex, and TextBlob. Deployed using Gradio.",
-      tags: ["Logistic Regression", "TF-IDF", "Regex", "TextBlob", "Gradio", "NLP"],
-      demoUrl: "https://www.youtube.com/watch?v=TTt2aFM7G5c&list=PLe-YIIlt-fbPMDsmSXbzQuyBeRKfvs__T&index=2&ab_channel=Jatin",
-      githubUrl: "https://github.com/jatinydav557/ticket-classifier-gradio",
-      image: "/projects/nlp-text.png",
-    },
-    {
-      id: 2,
       title: "Semantic Quote Retrieval - Fine-Tuned RAG System",
       description: "Semantic quote retrieval using fine-tuned Sentence Transformers, ChromaDB, LangChain, and Groq. Supports multi-hop QA, RAGAS evaluation, and Streamlit deployment.",
       tags: ["RAG", "Sentence Transformers", "ChromaDB", "LangChain", "Streamlit", "RAGAS"],
       demoUrl: "https://www.youtube.com/watch?v=JHRHpaTjnSg&list=PLe-YIIlt-fbPMDsmSXbzQuyBeRKfvs__T&index=1&ab_channel=Jatin",
       githubUrl: "https://github.com/jatinydav557/fine-tuned-model-RAG-ChromaDb",
-      image: "/projects/resume-matcher.png",
+      image: "/projects/quote.png",
     },
+    {
+      id: 2,
+      title: "Ticket Classifier & Entity Extractor - Traditional NLP & ML",
+      description: "Classifies support tickets by issue type and urgency using Logistic Regression, with entity extraction via TF-IDF, regex, and TextBlob. Deployed using Gradio.",
+      tags: ["Logistic Regression", "TF-IDF", "Regex", "TextBlob", "Gradio", "NLP"],
+      demoUrl: "https://www.youtube.com/watch?v=TTt2aFM7G5c&list=PLe-YIIlt-fbPMDsmSXbzQuyBeRKfvs__T&index=2&ab_channel=Jatin",
+      githubUrl: "https://github.com/jatinydav557/ticket-classifier-gradio",
+      image: "/projects/ticket.png",
+    },
+    
   ],
 
 
