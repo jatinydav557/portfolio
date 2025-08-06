@@ -59,6 +59,18 @@ const categorizedProjects = {
       
     ],
 
+  RGmX : [
+    {
+      id : 1,
+      title : "Multiple PDF-RAG with Conversation History",
+      description : "Built a RAG application which can take multiple PDF's,remembers chat history for Customers who concern privacy",
+      tags : ["Langchain","ChromaDB","Streamlit","RAG"],
+      githubUrl : "https://github.com/jatinydav557/RGmX-RAG",
+      image : "/projects/pdf.png",
+      demoUrl : "https://www.youtube.com/watch?v=_nQ3V6SbxJ0&list=PLe-YIIlt-fbOSpBoaPA6TyB3S25WSf5sL&ab_channel=Jatin"
+    }
+  ],
+
   MLOps: [
       {
         id: 1,
@@ -293,6 +305,7 @@ const tabInfo = [
   { key: "MLOps", label: "MLOps", icon: <Database size={16} /> },
   { key: "NLP", label: "NLP", icon: <MessageSquareText size={16} /> },
   { key: "VijayiWFH", label: "Vijayi WFH", icon: <Workflow size={16} /> },
+  { key: "RGmX", label: "RGmX", icon: <Bot size={16} /> },
   { key: "DeepLearning", label: "Deep Learning", icon: <Brain size={16} /> },
   { key: "GenAI", label: "Gen AI", icon: <Bot size={16} /> },
   { key: "AgenticAI", label: "Agentic AI", icon: <Workflow size={16} /> }
@@ -300,7 +313,7 @@ const tabInfo = [
 ];
 
 export const ProjectsSection = () => {
-  const [activeTab, setActiveTab] = useState("VijayiWFH");
+  const [activeTab, setActiveTab] = useState("RGmX");
 
   return (
     <section id="projects" className="py-24 px-4 relative">
