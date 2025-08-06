@@ -67,7 +67,7 @@ const categorizedProjects = {
       tags : ["Langchain","ChromaDB","Streamlit","RAG"],
       githubUrl : "https://github.com/jatinydav557/RGmX-RAG",
       image : "/projects/pdf.png",
-      demoUrl : "https://www.youtube.com/watch?v=_nQ3V6SbxJ0&list=PLe-YIIlt-fbOSpBoaPA6TyB3S25WSf5sL&ab_channel=Jatin"
+      demoUrl : "https://www.youtube.com/watch?v=dIGI8_FUDfg&ab_channel=Jatin"
     }
   ],
 
