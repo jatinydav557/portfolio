@@ -59,7 +59,7 @@ const categorizedProjects = {
       
     ],
 
-  RGmX : [
+  RMgX : [
     {
       id : 1,
       title : "Multiple PDF-RAG with Conversation History",
@@ -305,7 +305,7 @@ const tabInfo = [
   { key: "MLOps", label: "MLOps", icon: <Database size={16} /> },
   { key: "NLP", label: "NLP", icon: <MessageSquareText size={16} /> },
   { key: "VijayiWFH", label: "Vijayi WFH", icon: <Workflow size={16} /> },
-  { key: "RGmX", label: "RGmX", icon: <Bot size={16} /> },
+  { key: "RMgX", label: "RMgX", icon: <Bot size={16} /> },
   { key: "DeepLearning", label: "Deep Learning", icon: <Brain size={16} /> },
   { key: "GenAI", label: "Gen AI", icon: <Bot size={16} /> },
   { key: "AgenticAI", label: "Agentic AI", icon: <Workflow size={16} /> }
